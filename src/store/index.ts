@@ -1,9 +1,13 @@
-import { createStore } from "vuex";
+import { defineStore } from "pinia";
 
-export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+export const useTodoListStore = defineStore("todoList", {
+  state: () => ({
+    todoList: [],
+    background: "",
+  }),
+  actions: {
+    toggleCompleted(idToFind: any) {
+      console.log("hi");
+    },
+  },
 });
